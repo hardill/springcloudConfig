@@ -7,11 +7,11 @@ authProps:
   #超时记录
   #recordTime: ${recordTime}
   #排除卡bin信息
-  timeStampIgnore: flase
+  timeStampIgnore: false
   signEnabled: true
   allowDupOrder: true
-  chance: 1.0
-  sleepTime: 0
+  chance: 11.0
+  sleepTime: 10
   excludeBin:
     - 622686
     - 622288
