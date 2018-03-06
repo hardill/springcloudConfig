@@ -4,8 +4,8 @@ authProps:
   timeStampIgnore: false
   signEnabled: true
   allowDupOrder: true
-  chance: 2.0
-  sleepTime: 100
+  chance: 1.0
+  sleepTime: 0
   excludeBin:
     - 622686
     - 622288
