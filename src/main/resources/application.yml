@@ -1,5 +1,21 @@
 #自定义配置信息
 foo: hello foo2#自定义配置信息
+timeStampIgnore: false
+signEnabled: true
+allowDupOrder: true
+chance: 11.0
+sleepTime: 10
+excludeBin:
+  - 622686
+  - 622288
+  - 628280
+  - 622858
+  - 621058
+  - 621527
+  - 623091
+  - 621537
+  - 621736
+  - 623540
 authProps:
   customerKey: a1s2d3f4
   #加密盐值
@@ -7,22 +23,6 @@ authProps:
   #超时记录
   #recordTime: ${recordTime}
   #排除卡bin信息
-  timeStampIgnore: false
-  signEnabled: true
-  allowDupOrder: true
-  chance: 11.0
-  sleepTime: 10
-  excludeBin:
-    - 622686
-    - 622288
-    - 628280
-    - 622858
-    - 621058
-    - 621527
-    - 623091
-    - 621537
-    - 621736
-    - 623540
   excludeBinMap:
     16: 622686,622288,628280
     19: 622858,621058,621527,623091,621537,621736,623540
