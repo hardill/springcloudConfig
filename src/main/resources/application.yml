@@ -39,9 +39,7 @@ authProps:
     60: 交易失败,请联系发卡行
     61: 银行卡号无效
     66: 持卡人身份信息或手机号输入不正确
-server:
-  port: 8089
-  #connection-timeout: 6500 
+ 
 #日志配置
 logging:
   config: classpath:logback-dev.xml
