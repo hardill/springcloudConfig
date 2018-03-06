@@ -1,1 +1,103 @@
-foo: hello client
+#自定义配置信息
+foo: hello foo
+authProps:
+  customerKey: a1s2d3f4
+  #加密盐值
+  salt: ${salt}
+  #超时记录
+  #recordTime: ${recordTime}
+  #排除卡bin信息
+  excludeBinMap:
+    16: 622686,622288,628280
+    19: 622858,621058,621527,623091,621537,621736,623540
+  #状态码map
+  codeMsgMap:
+    90: 认证成功
+    91: 认证失败
+    10: 报文格式错误
+    101: 商户号为空或不是12位
+    102: 签名为空或不是32位
+    103: CHR-SET不是UTF-8
+    104: 时间戳错误
+    105: CUSTINFO为空
+    106: 订单号为空
+    107: BASE64解码错误
+    11: 验签失败
+    21: 商户号不存在
+    22: 商户暂停服务
+    23: 业务不存在
+    24: 重复交易
+    25: 余额不足
+    31: 身份证格式不对
+    32: 银行卡格式不对
+    33: 手机号格式不对
+    41: 系统繁忙
+    42: 测试条目不足
+    43: 异步url不可用
+    44: 交易失败,请重试
+    45: 交易失败,发卡行不支持
+    60: 交易失败,请联系发卡行
+    61: 银行卡号无效
+    66: 持卡人身份信息或手机号输入不正确
+server:
+  port: 8089
+  #connection-timeout: 6500 
+#日志配置
+logging:
+  config: classpath:logback-dev.xml
+#通过http对spring boot进行管理的
+ 
+#endpoints:
+  #shutdown: 
+    #sensitive: false
+    #enabled: true
+ 
+spring:
+  #数据源配置
+  datasource:
+    url: jdbc:mysql://118.178.132.247:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    #url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    connectionProperties: druid.stat.mergeSql=true 
+#redis配置
+  redis:
+    host: 118.178.132.247
+    #host: 127.0.0.1
+    port: 6379
+    password: 
+    timeout: 0
+    protectedMode: no 
+    pool:
+      maxActive: 8
+      maxWait: -1
+      maxIdle: 8
+      minIdle: 0
+#rabbitmq配置     
+  #application:
+    #name: spirng-boot-rabbitmq
+#rabbitmq连接信息配置
+  #rabbitmq:
+    #host: 118.178.132.247
+    #host: 127.0.0.1
+    #port: 5672
+    #username: hardill
+    #password: a1s2d3f4
+     
+mybatis:
+  #实体类所做包
+  type-aliases-package: com.wushi.auth.pojo
+  #mapper.xml所在位置
+  mapper-locations: classpath:mappers/*.xml 
+mapper:
+  mappers: com.wushi.auth.common.BaseMapper
+  identity: MYSQL
+
+#分页插件
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count :countSql
