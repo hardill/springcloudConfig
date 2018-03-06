@@ -1,5 +1,5 @@
 #自定义配置信息
-foo: hello foo
+foo: hello foo2
 authProps:
   customerKey: a1s2d3f4
   #加密盐值
