@@ -1,7 +1,7 @@
 #自定义配置信息
 foo: hello foo2
 authProps:
-  timeStampIgnore: false
+  timeStampIgnore: true
   signEnabled: true
   allowDupOrder: true
   chance: 1.0
