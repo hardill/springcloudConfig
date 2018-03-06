@@ -1,11 +1,11 @@
 #自定义配置信息
-foo: hello foo2#自定义配置信息
+foo: hello foo2
 authProps:
   timeStampIgnore: false
   signEnabled: true
   allowDupOrder: true
-  chance: 11.0
-  sleepTime: 10
+  chance: 2.0
+  sleepTime: 100
   excludeBin:
     - 622686
     - 622288
