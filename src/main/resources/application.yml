@@ -2,7 +2,7 @@
 foo: hello foo2
 authProps:
   timeStampIgnore: true
-  signEnabled: true
+  signEnabled: false
   allowDupOrder: true
   chance: 1.0
   sleepTime: 0
