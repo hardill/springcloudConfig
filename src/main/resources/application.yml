@@ -24,6 +24,13 @@ authProps:
   customerKey: a1s2d3f4
   #加密盐值
   salt: ${salt}
+  #请求地址map
+  urlMap:
+    WS151: https://api.lianfaces.com/idcard/verify
+    WS152: https://upverify.95516.com/gateway/api/backTransReq.do
+    WS156: https://upverify.95516.com/gateway/api/backTransReq.do
+    WS254: https://upverify.95516.com/gateway/api/backTransReq.do
+    WS301: https://upverify.95516.com/gateway/api/backTransReq.do
   #状态码map
   codeMsgMap:
     90: 认证成功
