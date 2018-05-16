@@ -1,7 +1,7 @@
 #自定义配置信息
 authProps:
   timeStampIgnore: true
-  signEnabled: true
+  signEnabled: false
   allowDupOrder: true
   chance: 1.0
   sleepTime: 0
